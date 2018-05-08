@@ -1,0 +1,41 @@
+{{!-- checks if the user is playing the game to detemine whether to show the start or restart button --}}
+{{#if playing}}
+<div class="button-container">
+  <button {{action 'start'}}>Restart</button>
+</div>
+{{else}}
+<div class="button-container">
+  <button {{action 'start'}}>Start</button>
+</div>
+{{/if}}
+
+{{!-- The canvas holds the entire same --}}
+<canvas id="stage" width="380" height="340"></canvas>
+{{#if playing}}
+{{!-- Checks if someone has won the game --}}
+  {{#if winner}}
+  {{!-- Displays the winner message --}}
+  <div class="message game-over">
+    <p>{{winner}} wins!</p>
+  </div>
+  {{/if}}
+  {{!-- checks if the game resulted in a draw --}}
+  {{#if draw}}
+  {{!-- displays the draw message --}}
+  <div class="message game-over">
+    <p>We'll call it a draw</p>
+  </div>
+  {{/if}}
+  {{!-- display the yellow player turn message --}}
+  {{#if yellow}}
+    <div class="message yellow">
+      <p>Your Turn</p>
+    </div>
+  {{/if}}
+  {{!-- display the red player turn message --}}
+  {{#if red}}
+    <div class="message red">
+      <p>Computer's Turn</p>
+    </div>
+  {{/if}}
+{{/if}}

@@ -1,0 +1,154 @@
+/*
+ * CSS styles for the application
+*/
+
+/* Styles for the entire body, ensures no gap between application and the
+ * browser, and sets the default font and size
+*/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  font-size: 12pt;
+}
+/* Floats the footer text to the left of other floated elements */
+.float-left {
+  float: left;
+}
+/* Floats the footer text to the right of the footer and aligns the text to
+ * the right
+*/
+.float-right {
+  float: right;
+  text-align: right;
+}
+/* Aligns text to the centre of the containing element */
+.text-center {
+  text-align: center;
+}
+/* Makes the heading link white */
+a {
+  color: #fff;
+}
+/* Sets the with for the app, its background colour and give it a turquoise
+ * border
+*/
+#app {
+  max-width: 400px;
+  background: #000;
+  border: 6px solid #36938F;
+}
+/* Gives the header a turquoise background, sets the text to be white,
+ * removes margins, adds a small amount of padding and centres the text
+*/
+header h1 {
+  background: #36938F;
+  color: #fff;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+/* Removes the underline from the heading 1 link */
+header h1 a {
+  text-decoration: none;
+}
+/* gives the black part of the game board a minimum height, so that the
+ * height of the application does not change during game play. Any overflow
+ * is hidden as this stops a scrollbar from appearing, the text is set to white
+ * and a little bit of padding is added. The article is set to relative, as
+ * it's position is dependent on other elements
+*/
+article {
+  min-height: 450px;
+  overflow: hidden;
+  color: #fff;
+  padding: 0.5rem;
+  position: relative;
+}
+/* sets the footers background colour to turquoise and the text to white */
+footer {
+  background: #36938F;
+  color: #fff;
+}
+/* sets the font size for the footer, and reduces the default padding of the p
+ * element and removes it's margins
+*/
+footer p {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.3rem;
+  margin: 0;
+}
+/* Ends the floated elements so anything afterwards appears in the normal
+ * flow of the document
+*/
+footer:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+/* Containter for the start button, centers the button and gives 5 pixels
+ * of padding to the top and the bottom, also sets it to be no wider than 50%
+*/
+.button-container {
+  margin: 5px auto;
+  max-width: 50%;
+}
+/*
+ * Sets the buttons width to be the whole of it's containing element, gives
+ * it a dashed turquoise border, black background and white text. also
+ * increases the text size, sets the font to the one used in the rest of
+ * the application and increases the padding between the text and the border
+*/
+button {
+  width: 100%;
+  border: dashed 2px #36938F;
+  background-color: #000;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  font-family: monospace;
+  padding: 5px;
+}
+/*
+ * Styling for the box containing the winner, draw and turn messages, sets
+ * the padding, centres the text, makes it bold, centres the box and sets
+ * the maximum width
+*/
+.message {
+  padding: 10px 0;
+  margin: 0 auto;
+  max-width: 60%;
+}
+/*
+ * Styling for the message, capitalises the message, centres the text,
+ * makes the text larger and bold, and removes the margin
+*/
+.message p {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+/*
+ * Sets the background colour of the message box and font colour of the winner
+ * or draw message
+*/
+.game-over {
+  background-color: #36938F;
+  color: #fff;
+}
+/*
+ * Sets the background colour of the message box and font colour of the yellow
+ * player turn message
+*/
+.yellow {
+  background-color: #FF0;
+  color: #000;
+}
+/*
+ * Sets the background colour of the message box and font colour of the red
+ * player turn message
+*/
+.red {
+  background-color: #F00;
+}

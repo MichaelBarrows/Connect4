@@ -1,0 +1,21 @@
+{{!-- Contains the entire application --}}
+<section id="app">
+  {{!-- The app header --}}
+  <header>
+    {{!-- link to the game route --}}
+    <h1>{{#link-to 'game'}}Connect 4{{/link-to}}</h1>
+  </header>
+  <article>
+    {{!-- where connect 4 will go --}}
+    {{outlet}}
+  </article>
+  {{!-- The app footer --}}
+  <footer>
+    <div class="float-left">
+      <p>Powered by Ember.</p>
+    </div>
+    <div class="float-right">
+      <p>Built by Michael Barrows</p>
+    </div>
+  </footer>
+</section>
